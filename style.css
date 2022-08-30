@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    font-size: 16px;
+}
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width:768px) {
+    html, body{
+        font-size: 14px;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:480px) {
+    html, body{
+        font-size: 12px;
+    }
+}
+
+/* START Header */
+header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(174deg, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0.45) 70%), url('./images/banner.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding:2% 6%;
+}
+
+header nav img{
+    max-width: 8.5rem;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav .nav-links{
+    flex: 1;
+}
+
+header nav .nav-links ul{
+    list-style-type: none;
+    text-align: right;
+}
+
+header nav .nav-links ul li{
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+header nav .nav-links ul li a{
+    cursor:pointer;
+}
+
+header nav .nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    margin-top: 4px;
+    transition: 0.5s;
+}
+header nav .nav-links ul li:hover::after{
+    width: 100%;
+}
+
+header .text-box{
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+header .text-box h1{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+header .text-box p{
+    font-size: 1rem;
+    padding-bottom: 4rem;
+}
+
+header .text-box a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border: solid 1px #fff;
+    cursor: pointer;
+    transition: 1s;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hero-btn:hover{
+
+   background-color: #f44336;
+   border-color: #f44336 !important;
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    
+}
+
+@media screen and (max-width:480px) {
+    header .text-box h1{
+        font-size: 2rem;
+    }
+
+    header nav .nav-links{
+        display: none;
+    }
+
+}
+/* END Header */
+
+/* START Course */
+
+.course{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+    text-align: center;
+}
+
+.course h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.course  p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #777;
+    padding: 1rem;
+}
+
+.course .courses-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.course .courses-list .course-col{
+    flex-basis: 31%;
+    padding: 1rem 0.4rem;
+    background-color: #fff3f3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course .courses-list .course-col:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.course .courses-list .course-col h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.course .courses-list .course-col p{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:768px) {
+
+    .course .courses-list .course-col{
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+}
+
+/* END Course */
+
+/* START Campus */
+
+.campus{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+    text-align: center;
+}
+
+.campus h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.campus p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #777;
+    padding-top: 0.5rem;
+}
+
+.campus .campus-list{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.campus .campus-list .campus-col{
+    flex-basis: 32%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.campus .campus-list .campus-col img{
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+}
+
+.campus .campus-list .campus-col .layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(244, 66, 54, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.campus .campus-list .campus-col .layer .city-name{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    color: #FFF;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    width: 100%;
+}
+
+.campus .campus-list .campus-col .layer:hover{
+    opacity: 1;
+}
+
+.campus .campus-list .campus-col .layer:hover .city-name{
+    bottom: 50%;
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:768px) {
+
+    .campus .campus-list .campus-col{
+        margin-bottom: 1.5rem;
+     }
+}
+
+@media screen and (max-width:480px) {
+
+}
+/* END Campus */
+
+/* START FACILITIES */
+
+.facilities{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+}
+
+.facilities h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.facilities p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #777;
+}
+
+.facilities-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.facilities .facilities-list .facilities-col{
+    flex-basis: 31%;
+    text-align: left;
+}
+
+.facilities .facilities-list .facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities .facilities-list .facilities-col h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.facilities .facilities-list .facilities-col p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.7rem;
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    .facilities .facilities-list .facilities-col{
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+}
+/* END FACILITIES */
+
+/* START CALL TO ACTION */
+
+.cta{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 6.5rem;
+    padding: 6.5rem 0;
+    text-align: center;
+    background-image: linear-gradient(174deg, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0.45) 70%), url('./images/banner2.jpg');
+    color: #FFF;
+    min-height: 5rem;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+.cta h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.cta .hero-btn{
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1px solid  #FFF;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:1024px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    .cta{
+        padding: 8.5rem 0; 
+    }
+    .cta h1{
+        font-size: 1.3rem;
+    }
+    .cta .hero-btn{
+        font-size: 0.9rem;
+    }
+   
+}
+
+@media screen and (max-width:480px) {
+
+}
+/* END CALL TO ACTION */
+
+/* START ABOUT US */
+
+.about-us{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.about-us h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.about-us p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #777;
+    margin-top: 1.5rem;
+}
+
+.about-us .social-media-icons{
+    margin-top: 1.2em;
+}
+
+.about-us .social-media-icons i{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.about-us p .heart-icon{
+    color: #f44336;
+}
+/* END ABOUT US */
